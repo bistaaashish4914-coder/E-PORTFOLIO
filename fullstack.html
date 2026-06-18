@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Development | Ashish Bista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <a class="nav-logo" href="index.html">AB<span>.dev</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="fullstack.html" class="active">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+  </div>
+</nav>
+
+<!-- ========== CONTENT ========== -->
+<div class="inner-page">
+  <a class="back-btn" href="index.html">← Back to Portfolio</a>
+
+  <div class="page-header">
+    <div class="page-breadcrumb">Section <span>01 / 05</span></div>
+    <h1 class="page-title">What is Full Stack<br>Development?</h1>
+    <p class="page-intro">Full stack development means building both the client-facing (frontend) and server-side (backend) parts of a web application — along with the database layer that stores data.</p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block">
+    <div class="block-label">Overview</div>
+    <div class="block-title">The Three Layers of the Web</div>
+    <div class="block-text">A full stack developer is comfortable working across all layers of a web application. The term "stack" refers to the collection of technologies used together to build a complete product. Understanding each layer is essential to building robust, scalable applications.</div>
+    <div class="pillars">
+      <div class="pillar pillar-fe">
+        <div class="pillar-icon">🖥️</div>
+        <div class="pillar-name">Frontend</div>
+        <div class="pillar-tech">HTML · CSS · JavaScript<br>React · Vue · Bootstrap<br>Tailwind CSS</div>
+      </div>
+      <div class="pillar pillar-be">
+        <div class="pillar-icon">⚙️</div>
+        <div class="pillar-name">Backend</div>
+        <div class="pillar-tech">Node.js · Express<br>Python · PHP · Java<br>REST APIs · GraphQL</div>
+      </div>
+      <div class="pillar pillar-db">
+        <div class="pillar-icon">🗄️</div>
+        <div class="pillar-name">Database</div>
+        <div class="pillar-tech">MySQL · PostgreSQL<br>MongoDB · SQLite<br>Firebase · Redis</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block">
+    <div class="block-label">Architecture</div>
+    <div class="block-title">Request–Response Flow</div>
+    <div class="block-text">When a user visits a website, here is what happens under the hood:</div>
+    <div class="arch-diagram">
+      <div class="arch-flow">
+        <div class="arch-layer">
+          <div class="arch-layer-name">USER</div>
+          <div class="arch-layer-main" style="color:var(--accent)">Browser</div>
+        </div>
+        <div class="arch-arrow">⇄</div>
+        <div class="arch-layer">
+          <div class="arch-layer-name">FRONTEND</div>
+          <div class="arch-layer-main" style="color:var(--accent2)">HTML/CSS/JS</div>
+        </div>
+        <div class="arch-arrow">⇄</div>
+        <div class="arch-layer">
+          <div class="arch-layer-name">BACKEND</div>
+          <div class="arch-layer-main" style="color:var(--accent3)">Server / API</div>
+        </div>
+        <div class="arch-arrow">⇄</div>
+        <div class="arch-layer">
+          <div class="arch-layer-name">DATABASE</div>
+          <div class="arch-layer-main" style="color:var(--accent4)">MySQL / Mongo</div>
+        </div>
+      </div>
+    </div>
+    <div class="block-text">The browser sends an HTTP request → the server processes it → queries the database if needed → sends back a response which the browser renders as HTML/CSS/JS.</div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block">
+    <div class="block-label">Key Concepts</div>
+    <div class="block-title">Frontend vs Backend vs Full Stack</div>
+    <div class="block-text">
+      <strong>Frontend developers</strong> focus on what users see and interact with — layouts, buttons, animations.
+      <strong>Backend developers</strong> handle server logic, authentication, and data processing.
+      <strong>Full stack developers</strong> can do both, making them extremely valuable in teams, especially for startups and smaller projects where one person may need to own the entire system.
+    </div>
+    <div class="tag-list">
+      <span class="tag green">Responsive Design</span>
+      <span class="tag green">User Interface</span>
+      <span class="tag red">Server Logic</span>
+      <span class="tag red">Authentication</span>
+      <span class="tag purple">SQL / NoSQL</span>
+      <span class="tag purple">Data Modelling</span>
+      <span class="tag yellow">REST APIs</span>
+      <span class="tag yellow">HTTP Methods</span>
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block">
+    <div class="block-label">Popular Stacks</div>
+    <div class="block-title">Real-World Technology Stacks</div>
+    <div class="block-text">Developers often group technologies into named stacks. Common examples include:</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">STACKS</div>
+      </div>
+      <div class="code-body">
+<span class="cm">// MEAN Stack</span>
+MongoDB + Express.js + Angular + Node.js
+
+<span class="cm">// MERN Stack (very popular in 2024)</span>
+MongoDB + Express.js + React + Node.js
+
+<span class="cm">// LAMP Stack (classic)</span>
+Linux + Apache + MySQL + PHP
+
+<span class="cm">// JAMstack (modern serverless)</span>
+JavaScript + APIs + Markup
+      </div>
+    </div>
+  </div>
+
+</div><!-- /inner-page -->
+</body>
+</html>

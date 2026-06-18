@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript | Ashish Bista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <a class="nav-logo" href="index.html">AB<span>.dev</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html" class="active">JavaScript</a>
+  </div>
+</nav>
+
+<!-- ========== CONTENT ========== -->
+<div class="inner-page">
+  <a class="back-btn" href="index.html">← Back to Portfolio</a>
+
+  <div class="page-header">
+    <div class="page-breadcrumb">Section <span>05 / 05</span></div>
+    <h1 class="page-title">JavaScript</h1>
+    <p class="page-intro">JavaScript is the programming language of the web. It adds interactivity, logic, and dynamic behaviour to HTML pages — from simple button clicks to complex single-page applications.</p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block">
+    <div class="block-label">DOM Manipulation</div>
+    <div class="block-title">Accessing &amp; Changing the DOM</div>
+    <div class="block-text">The Document Object Model (DOM) is a tree representation of the HTML page. JavaScript can select, create, modify, or delete any element in this tree using methods like <strong>getElementById</strong>, <strong>querySelector</strong>, and <strong>innerHTML</strong>.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">JAVASCRIPT</div>
+      </div>
+      <div class="code-body">
+<span class="cm">// Select an element by ID</span>
+<span class="kw">const</span> heading = document.<span class="fn">getElementById</span>(<span class="str">'main-title'</span>);
+
+<span class="cm">// Change its text</span>
+heading.textContent = <span class="str">'Hello from JavaScript!'</span>;
+
+<span class="cm">// Change its style</span>
+heading.style.color = <span class="str">'#7cffd4'</span>;
+
+<span class="cm">// Query selector (CSS syntax)</span>
+<span class="kw">const</span> btn = document.<span class="fn">querySelector</span>(<span class="str">'.submit-btn'</span>);
+
+<span class="cm">// Create and append a new element</span>
+<span class="kw">const</span> newPara = document.<span class="fn">createElement</span>(<span class="str">'p'</span>);
+newPara.textContent = <span class="str">'I was added by JavaScript!'</span>;
+document.body.<span class="fn">appendChild</span>(newPara);
+      </div>
+    </div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE DEMO — DOM Manipulation</div>
+      <div class="demo-content">
+        <div style="font-family:Arial;font-size:14px;color:#333;">
+          <p>Click the button to change the paragraph below:</p>
+          <p id="dom-output">This is the original paragraph text.</p>
+          <button
+            onclick="document.getElementById('dom-output').textContent='✅ JavaScript changed me!'; document.getElementById('dom-output').style.color='#27ae60';"
+            style="background:#2c7be5;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;margin-top:8px;">
+            Change Paragraph
+          </button>
+          <button
+            onclick="document.getElementById('dom-output').textContent='This is the original paragraph text.';document.getElementById('dom-output').style.color='#333';"
+            style="background:#6c757d;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;margin-top:8px;margin-left:6px;">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block">
+    <div class="block-label">Event Handling</div>
+    <div class="block-title">Counter with Event Listeners</div>
+    <div class="block-text">JavaScript listens for user interactions through <strong>addEventListener</strong> or inline handlers. Events include clicks, keyboard input, mouse movements, form submissions, and more.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE DEMO — Event Handling Counter</div>
+      <div class="demo-content">
+        <div id="js-counter">
+          <button onclick="adjustCounter(-1)">−</button>
+          <div id="counter-val">0</div>
+          <button onclick="adjustCounter(1)">+</button>
+        </div>
+        <p id="counter-msg" style="font-family:Arial;font-size:13px;color:#666;margin-top:8px;"></p>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">JAVASCRIPT</div>
+      </div>
+      <div class="code-body">
+<span class="kw">let</span> count = <span class="num">0</span>;
+
+<span class="kw">function</span> <span class="fn">adjustCounter</span>(amount) {
+  count += amount;
+  document.<span class="fn">getElementById</span>(<span class="str">'counter-val'</span>).textContent = count;
+
+  <span class="cm">// Colour based on value</span>
+  <span class="kw">const</span> el = document.<span class="fn">getElementById</span>(<span class="str">'counter-val'</span>);
+  <span class="kw">if</span> (count > <span class="num">0</span>)      el.style.color = <span class="str">'#27ae60'</span>;
+  <span class="kw">else if</span> (count < <span class="num">0</span>) el.style.color = <span class="str">'#e74c3c'</span>;
+  <span class="kw">else</span>               el.style.color = <span class="str">'#333'</span>;
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block">
+    <div class="block-label">Dynamic Content</div>
+    <div class="block-title">Dynamic Background Colour Changer</div>
+    <div class="block-text">JavaScript can update styles and content on the fly based on user interaction — without reloading the page.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE DEMO — Dynamic Styling</div>
+      <div class="demo-content">
+        <div id="color-btns">
+          <button onclick="changeColor('#e74c3c')" style="background:#e74c3c">Red</button>
+          <button onclick="changeColor('#27ae60')" style="background:#27ae60">Green</button>
+          <button onclick="changeColor('#2c7be5')" style="background:#2c7be5">Blue</button>
+          <button onclick="changeColor('#9b59b6')" style="background:#9b59b6">Purple</button>
+        </div>
+        <div id="color-result"></div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">JAVASCRIPT</div>
+      </div>
+      <div class="code-body">
+<span class="kw">function</span> <span class="fn">changeColor</span>(color) {
+  <span class="kw">const</span> box = document.<span class="fn">getElementById</span>(<span class="str">'color-result'</span>);
+  box.style.background = color;
+  box.textContent = <span class="str">`Colour set to: </span>${color}<span class="str">`</span>;
+  box.style.color = <span class="str">'#fff'</span>;
+  box.style.padding = <span class="str">'10px'</span>;
+  box.style.borderRadius = <span class="str">'6px'</span>;
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block">
+    <div class="block-label">Form Validation</div>
+    <div class="block-title">JavaScript Form Validation</div>
+    <div class="block-text">Before submitting data to a server, JavaScript can validate user inputs in real time — checking for required fields, email format, password length, and more. This improves UX and reduces unnecessary server requests.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE DEMO — Form Validation</div>
+      <div class="demo-content">
+        <div style="font-family:Arial;font-size:14px;max-width:340px;">
+          <label style="display:block;margin-bottom:4px;font-weight:bold;color:#333;">Name</label>
+          <input id="val-name" class="val-input" type="text" placeholder="Your name">
+          <span id="err-name" class="val-error"></span>
+          <label style="display:block;margin-bottom:4px;font-weight:bold;color:#333;">Email</label>
+          <input id="val-email" class="val-input" type="text" placeholder="you@example.com">
+          <span id="err-email" class="val-error"></span>
+          <label style="display:block;margin-bottom:4px;font-weight:bold;color:#333;">Password</label>
+          <input id="val-pass" class="val-input" type="password" placeholder="Min 6 characters">
+          <span id="err-pass" class="val-error"></span>
+          <button class="val-btn" onclick="validateForm()">Submit</button>
+          <p id="val-success" class="val-success">✅ Form submitted successfully!</p>
+        </div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">JAVASCRIPT</div>
+      </div>
+      <div class="code-body">
+<span class="kw">function</span> <span class="fn">validateForm</span>() {
+  <span class="kw">let</span> isValid = <span class="kw">true</span>;
+
+  <span class="kw">const</span> name  = document.<span class="fn">getElementById</span>(<span class="str">'val-name'</span>).value;
+  <span class="kw">const</span> email = document.<span class="fn">getElementById</span>(<span class="str">'val-email'</span>).value;
+  <span class="kw">const</span> pass  = document.<span class="fn">getElementById</span>(<span class="str">'val-pass'</span>).value;
+
+  <span class="cm">// Name check</span>
+  <span class="kw">if</span> (name.trim() === <span class="str">''</span>) {
+    <span class="fn">showError</span>(<span class="str">'err-name'</span>, <span class="str">'Name is required'</span>);
+    isValid = <span class="kw">false</span>;
+  }
+
+  <span class="cm">// Email format check</span>
+  <span class="kw">const</span> emailRegex = <span class="val">/^[^\s@]+@[^\s@]+\.[^\s@]+$/</span>;
+  <span class="kw">if</span> (!emailRegex.<span class="fn">test</span>(email)) {
+    <span class="fn">showError</span>(<span class="str">'err-email'</span>, <span class="str">'Enter a valid email'</span>);
+    isValid = <span class="kw">false</span>;
+  }
+
+  <span class="cm">// Password length check</span>
+  <span class="kw">if</span> (pass.length < <span class="num">6</span>) {
+    <span class="fn">showError</span>(<span class="str">'err-pass'</span>, <span class="str">'Min 6 characters required'</span>);
+    isValid = <span class="kw">false</span>;
+  }
+
+  <span class="kw">if</span> (isValid) {
+    document.<span class="fn">getElementById</span>(<span class="str">'val-success'</span>).style.display = <span class="str">'block'</span>;
+  }
+}
+      </div>
+    </div>
+  </div>
+
+</div><!-- /inner-page -->
+
+<script>
+  /* ---- COUNTER ---- */
+  let count = 0;
+  function adjustCounter(n) {
+    count += n;
+    const el = document.getElementById('counter-val');
+    el.textContent = count;
+    if      (count > 0) el.style.color = '#27ae60';
+    else if (count < 0) el.style.color = '#e74c3c';
+    else                el.style.color = '#333';
+    const msg = document.getElementById('counter-msg');
+    msg.textContent = count === 0 ? '' : `Counter is at ${count}`;
+  }
+
+  /* ---- COLOUR CHANGER ---- */
+  function changeColor(color) {
+    const box = document.getElementById('color-result');
+    box.style.background   = color;
+    box.textContent        = `Colour set to: ${color}`;
+    box.style.color        = '#fff';
+    box.style.padding      = '10px';
+    box.style.borderRadius = '6px';
+    box.style.marginTop    = '10px';
+    box.style.fontSize     = '13px';
+    box.style.fontFamily   = 'Arial';
+  }
+
+  /* ---- FORM VALIDATION ---- */
+  function showError(id, msg) {
+    document.getElementById(id).textContent = msg;
+  }
+  function clearErrors() {
+    ['err-name', 'err-email', 'err-pass'].forEach(id => {
+      document.getElementById(id).textContent = '';
+    });
+    document.getElementById('val-success').style.display = 'none';
+  }
+  function validateForm() {
+    clearErrors();
+    let isValid = true;
+    const name  = document.getElementById('val-name').value;
+    const email = document.getElementById('val-email').value;
+    const pass  = document.getElementById('val-pass').value;
+
+    if (name.trim() === '') {
+      showError('err-name', '⚠ Name is required');
+      isValid = false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showError('err-email', '⚠ Enter a valid email address');
+      isValid = false;
+    }
+    if (pass.length < 6) {
+      showError('err-pass', '⚠ Password must be at least 6 characters');
+      isValid = false;
+    }
+    if (isValid) {
+      document.getElementById('val-success').style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>

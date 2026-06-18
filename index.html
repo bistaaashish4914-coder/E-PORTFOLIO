@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashish Bista | Full Stack ePortfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- HOME-ONLY STYLES ---- */
+    .home-hero {
+      min-height: 100vh;
+      display: grid; place-items: center;
+      padding: 110px 40px 60px;
+      position: relative; overflow: hidden;
+    }
+
+    /* subtle background texture */
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 50% at 72% 28%, rgba(124,255,212,0.055) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 45% at 20% 72%, rgba(167,139,250,0.05) 0%, transparent 70%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; opacity: 0.035;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+
+    .hero-content { position: relative; text-align: center; max-width: 820px; width: 100%; }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono); font-size: 0.72rem;
+      color: var(--accent); background: rgba(124,255,212,0.07);
+      border: 1px solid rgba(124,255,212,0.18);
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 28px;
+      letter-spacing: 0.08em;
+    }
+    .hero-tag::before { content: '▸'; }
+
+    .hero-name {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(3rem, 9vw, 5.8rem);
+      line-height: 0.95; letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .hero-name .accent { color: var(--accent); }
+
+    .hero-sub {
+      font-family: var(--font-mono); font-size: 0.82rem;
+      color: var(--muted); margin-bottom: 14px; letter-spacing: 0.06em;
+    }
+
+    .hero-desc {
+      font-size: 1rem; color: var(--muted); line-height: 1.75;
+      max-width: 520px; margin: 0 auto 52px;
+    }
+    .hero-desc strong { color: var(--text); font-weight: 500; }
+
+    /* ---- SECTION CARDS ---- */
+    .sections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px; max-width: 900px; width: 100%;
+    }
+
+    .section-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 26px 26px 22px;
+      cursor: pointer; transition: transform 0.22s, border-color 0.22s;
+      position: relative; overflow: hidden; text-align: left;
+      text-decoration: none; color: inherit; display: block;
+    }
+    .section-card::after {
+      content: ''; position: absolute; inset: 0;
+      opacity: 0; transition: opacity 0.22s; border-radius: inherit;
+    }
+    .section-card:hover { transform: translateY(-4px); border-color: var(--card-accent, var(--border)); }
+    .section-card:hover::after { opacity: 1; }
+
+    .card-s1 { --card-accent: rgba(124,255,212,0.35); }
+    .card-s1::after { background: radial-gradient(ellipse at top left, rgba(124,255,212,0.07), transparent 65%); }
+    .card-s2 { --card-accent: rgba(255,107,107,0.35); }
+    .card-s2::after { background: radial-gradient(ellipse at top left, rgba(255,107,107,0.07), transparent 65%); }
+    .card-s3 { --card-accent: rgba(255,209,102,0.35); }
+    .card-s3::after { background: radial-gradient(ellipse at top left, rgba(255,209,102,0.07), transparent 65%); }
+    .card-s4 { --card-accent: rgba(167,139,250,0.35); }
+    .card-s4::after { background: radial-gradient(ellipse at top left, rgba(167,139,250,0.07), transparent 65%); }
+    .card-s5 { --card-accent: rgba(251,191,36,0.35); }
+    .card-s5::after { background: radial-gradient(ellipse at top left, rgba(251,191,36,0.07), transparent 65%); }
+
+    .card-num {
+      font-family: var(--font-mono); font-size: 0.66rem;
+      color: var(--muted); margin-bottom: 14px; letter-spacing: 0.1em;
+    }
+    .card-icon  { font-size: 1.8rem; margin-bottom: 10px; }
+    .card-title {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 1.1rem; margin-bottom: 8px; letter-spacing: -0.01em;
+    }
+    .card-desc  { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+    .card-arrow {
+      position: absolute; bottom: 22px; right: 22px;
+      font-size: 1rem; color: var(--muted); transition: all 0.18s;
+    }
+    .section-card:hover .card-arrow { color: var(--text); transform: translate(3px,-3px); }
+
+    @media (max-width: 700px) {
+      .home-hero { padding: 90px 20px 50px; }
+      .sections-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <a class="nav-logo" href="index.html">Ashish_Bista<span>.dev</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="home-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">CET138 Full Stack Development · Assignment 1</div>
+
+    <h1 class="hero-name">Ashish<br><span class="accent">Bista</span></h1>
+    <p class="hero-sub">BSc IT · ISMT College</p>
+    <p class="hero-desc">
+      Welcome to my ePortfolio — a showcase of my learning in
+      <strong>Full Stack Web Development</strong>. Explore each section to see
+      demonstrations, explanations, and live working examples.
+    </p>
+
+    <div class="sections-grid">
+
+      <a class="section-card card-s1" href="fullstack.html">
+        <div class="card-num">01 / 05</div>
+        <div class="card-icon">🌐</div>
+        <div class="card-title">What is Full Stack Development?</div>
+        <div class="card-desc">Frontend, backend, databases and how they connect to build complete web applications.</div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <a class="section-card card-s2" href="html.html">
+        <div class="card-num">02 / 05</div>
+        <div class="card-icon">📄</div>
+        <div class="card-title">HTML</div>
+        <div class="card-desc">Semantic elements, forms, tables, multimedia and the foundational structure of the web.</div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <a class="section-card card-s3" href="css.html">
+        <div class="card-num">03 / 05</div>
+        <div class="card-icon">🎨</div>
+        <div class="card-title">CSS</div>
+        <div class="card-desc">Selectors, box model, Flexbox, Grid, animations and responsive design techniques.</div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <a class="section-card card-s4" href="bootstrap.html">
+        <div class="card-num">04 / 05</div>
+        <div class="card-icon">🥾</div>
+        <div class="card-title">Bootstrap Framework</div>
+        <div class="card-desc">Grid system, ready-made components, responsive layouts and utility classes.</div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <a class="section-card card-s5" href="javascript.html">
+        <div class="card-num">05 / 05</div>
+        <div class="card-icon">⚡</div>
+        <div class="card-title">JavaScript</div>
+        <div class="card-desc">DOM manipulation, event handling, form validation and dynamic interactive content.</div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

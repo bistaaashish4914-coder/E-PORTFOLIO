@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Ashish Bista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <a class="nav-logo" href="index.html">AB<span>.dev</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html" class="active">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+  </div>
+</nav>
+
+<!-- ========== CONTENT ========== -->
+<div class="inner-page">
+  <a class="back-btn" href="index.html">← Back to Portfolio</a>
+
+  <div class="page-header">
+    <div class="page-breadcrumb">Section <span>02 / 05</span></div>
+    <h1 class="page-title">HTML</h1>
+    <p class="page-intro">HyperText Markup Language is the skeleton of every webpage. HTML5 introduced semantic elements that make pages more meaningful, accessible, and SEO-friendly.</p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block">
+    <div class="block-label">Document Structure</div>
+    <div class="block-title">HTML5 Boilerplate</div>
+    <div class="block-text">Every HTML document follows a standard structure. The <strong>&lt;!DOCTYPE html&gt;</strong> declaration tells the browser we're using HTML5, and semantic elements like <strong>&lt;header&gt;</strong>, <strong>&lt;main&gt;</strong>, and <strong>&lt;footer&gt;</strong> give meaning to the layout.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="kw">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"en"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"viewport"</span> <span class="attr">content</span>=<span class="str">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>My Web Page<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;header&gt;</span>
+      <span class="tag">&lt;nav&gt;</span>...<span class="tag">&lt;/nav&gt;</span>
+    <span class="tag">&lt;/header&gt;</span>
+    <span class="tag">&lt;main&gt;</span>
+      <span class="tag">&lt;section&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Hello World<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Welcome to my page!<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;/section&gt;</span>
+    <span class="tag">&lt;/main&gt;</span>
+    <span class="tag">&lt;footer&gt;</span>© 2025 Ashish Bista<span class="tag">&lt;/footer&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block">
+    <div class="block-label">Semantic Elements</div>
+    <div class="block-title">HTML5 Semantic Tags</div>
+    <div class="block-text">Semantic elements clearly describe their meaning to both the browser and developer. They improve <strong>accessibility</strong> (screen readers), <strong>SEO</strong>, and code readability.</div>
+    <div class="tag-list">
+      <span class="tag green">&lt;header&gt;</span>
+      <span class="tag green">&lt;nav&gt;</span>
+      <span class="tag green">&lt;main&gt;</span>
+      <span class="tag green">&lt;section&gt;</span>
+      <span class="tag green">&lt;article&gt;</span>
+      <span class="tag green">&lt;aside&gt;</span>
+      <span class="tag green">&lt;footer&gt;</span>
+      <span class="tag green">&lt;figure&gt;</span>
+      <span class="tag green">&lt;figcaption&gt;</span>
+      <span class="tag green">&lt;time&gt;</span>
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block">
+    <div class="block-label">Working Demo</div>
+    <div class="block-title">HTML Form Example</div>
+    <div class="block-text">Forms are used to collect user input. Key attributes like <strong>type</strong>, <strong>name</strong>, <strong>required</strong>, and <strong>placeholder</strong> make forms functional and accessible.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="str">"/submit"</span> <span class="attr">method</span>=<span class="str">"POST"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="str">"name"</span><span class="tag">&gt;</span>Full Name:<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">id</span>=<span class="str">"name"</span> <span class="attr">required</span> <span class="attr">placeholder</span>=<span class="str">"Enter your name"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="str">"email"</span><span class="tag">&gt;</span>Email:<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"email"</span> <span class="attr">id</span>=<span class="str">"email"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;select</span> <span class="attr">name</span>=<span class="str">"course"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;option&gt;</span>BSc IT<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option&gt;</span>BSc CS<span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+
+  <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="str">"submit"</span><span class="tag">&gt;</span>Submit<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+      </div>
+    </div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW</div>
+      <div class="demo-content">
+        <div class="html-form">
+          <label for="d-name">Full Name:</label>
+          <input type="text" id="d-name" placeholder="Enter your name">
+          <label for="d-email">Email:</label>
+          <input type="email" id="d-email" placeholder="Enter your email">
+          <label for="d-course">Course:</label>
+          <select id="d-course">
+            <option>BSc IT</option>
+            <option>BSc CS</option>
+            <option>BSc Software Engineering</option>
+          </select>
+          <button type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block">
+    <div class="block-label">Tables &amp; Lists</div>
+    <div class="block-title">Structuring Data with Tables</div>
+    <div class="block-text">Tables are used for tabular data — not for layout. Use <strong>&lt;thead&gt;</strong>, <strong>&lt;tbody&gt;</strong>, and <strong>&lt;th scope&gt;</strong> for accessible, well-structured tables.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;th</span> <span class="attr">scope</span>=<span class="str">"col"</span><span class="tag">&gt;</span>Name<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th</span> <span class="attr">scope</span>=<span class="str">"col"</span><span class="tag">&gt;</span>Technology<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+  <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;&lt;td&gt;</span>React<span class="tag">&lt;/td&gt;&lt;td&gt;</span>Frontend<span class="tag">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;&lt;td&gt;</span>Node.js<span class="tag">&lt;/td&gt;&lt;td&gt;</span>Backend<span class="tag">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+      </div>
+    </div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW</div>
+      <div class="demo-content">
+        <table style="width:100%;border-collapse:collapse;font-family:Arial;font-size:13px;">
+          <thead>
+            <tr style="background:#2c7be5;color:#fff;">
+              <th style="padding:9px 14px;text-align:left">Technology</th>
+              <th style="padding:9px 14px;text-align:left">Layer</th>
+              <th style="padding:9px 14px;text-align:left">Language</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8f9fa">
+              <td style="padding:8px 14px;border-bottom:1px solid #dee2e6">React</td>
+              <td style="padding:8px 14px;border-bottom:1px solid #dee2e6">Frontend</td>
+              <td style="padding:8px 14px;border-bottom:1px solid #dee2e6">JavaScript</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 14px;border-bottom:1px solid #dee2e6">Node.js</td>
+              <td style="padding:8px 14px;border-bottom:1px solid #dee2e6">Backend</td>
+              <td style="padding:8px 14px;border-bottom:1px solid #dee2e6">JavaScript</td>
+            </tr>
+            <tr style="background:#f8f9fa">
+              <td style="padding:8px 14px">MySQL</td>
+              <td style="padding:8px 14px">Database</td>
+              <td style="padding:8px 14px">SQL</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 5 -->
+  <div class="content-block">
+    <div class="block-label">Multimedia</div>
+    <div class="block-title">Images, Audio &amp; Video</div>
+    <div class="block-text">HTML5 introduced native <strong>&lt;video&gt;</strong> and <strong>&lt;audio&gt;</strong> elements. Always include the <strong>alt</strong> attribute on images for accessibility.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="cm">&lt;!-- Accessible Image --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"photo.jpg"</span> <span class="attr">alt</span>=<span class="str">"A description of the image"</span> <span class="attr">width</span>=<span class="str">"600"</span><span class="tag">&gt;</span>
+
+<span class="cm">&lt;!-- HTML5 Video --&gt;</span>
+<span class="tag">&lt;video</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="str">"400"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="str">"video.mp4"</span> <span class="attr">type</span>=<span class="str">"video/mp4"</span><span class="tag">&gt;</span>
+  Your browser does not support video.
+<span class="tag">&lt;/video&gt;</span>
+
+<span class="cm">&lt;!-- HTML5 Audio --&gt;</span>
+<span class="tag">&lt;audio</span> <span class="attr">controls</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="str">"audio.mp3"</span> <span class="attr">type</span>=<span class="str">"audio/mpeg"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/audio&gt;</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /inner-page -->
+</body>
+</html>

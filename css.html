@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS | Ashish Bista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <a class="nav-logo" href="index.html">AB<span>.dev</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html" class="active">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+  </div>
+</nav>
+
+<!-- ========== CONTENT ========== -->
+<div class="inner-page">
+  <a class="back-btn" href="index.html">← Back to Portfolio</a>
+
+  <div class="page-header">
+    <div class="page-breadcrumb">Section <span>03 / 05</span></div>
+    <h1 class="page-title">CSS</h1>
+    <p class="page-intro">Cascading Style Sheets bring visual life to HTML. From basic selectors to advanced layouts and animations, CSS is what makes the web beautiful and usable.</p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block">
+    <div class="block-label">Selectors &amp; Specificity</div>
+    <div class="block-title">CSS Selectors</div>
+    <div class="block-text">CSS selectors target HTML elements for styling. Specificity determines which rule wins when multiple rules apply to the same element.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">CSS</div>
+      </div>
+      <div class="code-body">
+<span class="cm">/* Element selector */</span>
+<span class="sel">p</span> { <span class="prop">color</span>: <span class="val">#333</span>; }
+
+<span class="cm">/* Class selector */</span>
+<span class="sel">.card</span> { <span class="prop">background</span>: <span class="val">#fff</span>; <span class="prop">border-radius</span>: <span class="val">8px</span>; }
+
+<span class="cm">/* ID selector */</span>
+<span class="sel">#header</span> { <span class="prop">font-size</span>: <span class="val">2rem</span>; }
+
+<span class="cm">/* Pseudo-class */</span>
+<span class="sel">button:hover</span> { <span class="prop">background</span>: <span class="val">#2980b9</span>; }
+
+<span class="cm">/* Descendant combinator */</span>
+<span class="sel">nav a</span> { <span class="prop">text-decoration</span>: <span class="val">none</span>; }
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block">
+    <div class="block-label">Box Model</div>
+    <div class="block-title">The CSS Box Model</div>
+    <div class="block-text">Every HTML element is a box with <strong>content</strong>, <strong>padding</strong>, <strong>border</strong>, and <strong>margin</strong>. Understanding this model is fundamental to controlling layout and spacing.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW — Box Model</div>
+      <div class="demo-content">
+        <div id="css-box-demo">Content</div>
+        <p style="font-size:12px;color:#666;font-family:Arial">↑ Content: 160×80px · Padding: 10px · Border: 4px solid · Margin: 16px</p>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">CSS</div>
+      </div>
+      <div class="code-body">
+<span class="sel">.box</span> {
+  <span class="prop">width</span>: <span class="val">160px</span>;
+  <span class="prop">height</span>: <span class="val">80px</span>;
+  <span class="prop">padding</span>: <span class="val">10px</span>;            <span class="cm">/* space inside the border */</span>
+  <span class="prop">border</span>: <span class="val">4px solid #2980b9</span>;
+  <span class="prop">margin</span>: <span class="val">16px 0</span>;         <span class="cm">/* space outside the border */</span>
+  <span class="prop">box-sizing</span>: <span class="val">border-box</span>;  <span class="cm">/* include padding in width */</span>
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block">
+    <div class="block-label">Flexbox</div>
+    <div class="block-title">Flexible Box Layout</div>
+    <div class="block-text">Flexbox is a one-dimensional layout system that easily aligns items in a row or column, distributes space, and handles wrapping.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW — Flexbox</div>
+      <div class="demo-content">
+        <div id="flex-demo">
+          <div class="fx">Item 1</div>
+          <div class="fx">Item 2</div>
+          <div class="fx">Item 3</div>
+          <div class="fx">Item 4</div>
+        </div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">CSS</div>
+      </div>
+      <div class="code-body">
+<span class="sel">.container</span> {
+  <span class="prop">display</span>: <span class="val">flex</span>;
+  <span class="prop">gap</span>: <span class="val">10px</span>;
+  <span class="prop">flex-wrap</span>: <span class="val">wrap</span>;
+  <span class="prop">justify-content</span>: <span class="val">flex-start</span>;
+  <span class="prop">align-items</span>: <span class="val">center</span>;
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block">
+    <div class="block-label">CSS Grid</div>
+    <div class="block-title">Grid Layout System</div>
+    <div class="block-text">CSS Grid is a two-dimensional layout system — perfect for creating complex, responsive page layouts with rows and columns.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW — Grid</div>
+      <div class="demo-content">
+        <div id="grid-demo">
+          <div class="gx">Col 1</div><div class="gx">Col 2</div><div class="gx">Col 3</div>
+          <div class="gx">Col 4</div><div class="gx">Col 5</div><div class="gx">Col 6</div>
+        </div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">CSS</div>
+      </div>
+      <div class="code-body">
+<span class="sel">.grid</span> {
+  <span class="prop">display</span>: <span class="val">grid</span>;
+  <span class="prop">grid-template-columns</span>: <span class="val">1fr 1fr 1fr</span>;
+  <span class="prop">gap</span>: <span class="val">8px</span>;
+}
+<span class="cm">/* 1fr = one fraction of available space */</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 5 -->
+  <div class="content-block">
+    <div class="block-label">Animations</div>
+    <div class="block-title">CSS Keyframe Animation</div>
+    <div class="block-text">CSS animations use <strong>@keyframes</strong> to define states and <strong>animation</strong> properties to control timing, repetition, and direction.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW — Animation</div>
+      <div class="demo-content" style="background:#0b0c0e;">
+        <div class="anim-box"></div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">CSS</div>
+      </div>
+      <div class="code-body">
+<span class="sel">@keyframes</span> <span class="fn">spinPulse</span> {
+  <span class="num">0%</span>, <span class="num">100%</span>  { <span class="prop">transform</span>: <span class="val">scale(1) rotate(0deg)</span>; }
+  <span class="num">50%</span>       { <span class="prop">transform</span>: <span class="val">scale(1.3) rotate(180deg)</span>; }
+}
+
+<span class="sel">.box</span> {
+  <span class="prop">animation</span>: <span class="val">spinPulse 2s ease-in-out infinite</span>;
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 6 -->
+  <div class="content-block">
+    <div class="block-label">Responsive Design</div>
+    <div class="block-title">Media Queries</div>
+    <div class="block-text">Media queries allow CSS to adapt based on screen size, making websites responsive and mobile-friendly without needing separate codebases.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">CSS</div>
+      </div>
+      <div class="code-body">
+<span class="cm">/* Default: 3-column layout */</span>
+<span class="sel">.grid</span> { <span class="prop">grid-template-columns</span>: <span class="val">1fr 1fr 1fr</span>; }
+
+<span class="cm">/* Tablet: 2 columns */</span>
+<span class="sel">@media (max-width: 768px)</span> {
+  <span class="sel">.grid</span> { <span class="prop">grid-template-columns</span>: <span class="val">1fr 1fr</span>; }
+}
+
+<span class="cm">/* Mobile: 1 column */</span>
+<span class="sel">@media (max-width: 480px)</span> {
+  <span class="sel">.grid</span> { <span class="prop">grid-template-columns</span>: <span class="val">1fr</span>; }
+}
+      </div>
+    </div>
+  </div>
+
+</div><!-- /inner-page -->
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap | Ashish Bista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <a class="nav-logo" href="index.html">AB<span>.dev</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="bootstrap.html" class="active">Bootstrap</a>
+    <a href="javascript.html">JavaScript</a>
+  </div>
+</nav>
+
+<!-- ========== CONTENT ========== -->
+<div class="inner-page">
+  <a class="back-btn" href="index.html">← Back to Portfolio</a>
+
+  <div class="page-header">
+    <div class="page-breadcrumb">Section <span>04 / 05</span></div>
+    <h1 class="page-title">Bootstrap<br>Framework</h1>
+    <p class="page-intro">Bootstrap is the world's most popular CSS framework. It provides a responsive grid system, pre-built components, and utility classes that dramatically speed up development.</p>
+  </div>
+
+  <!-- BLOCK 1 -->
+  <div class="content-block">
+    <div class="block-label">Getting Started</div>
+    <div class="block-title">Including Bootstrap via CDN</div>
+    <div class="block-text">Bootstrap can be added to any HTML page using a CDN link — no installation needed. This includes both the CSS file and the JavaScript bundle for interactive components.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="cm">&lt;!-- Bootstrap 5 CSS — place inside &lt;head&gt; --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">href</span>=<span class="str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span>
+      <span class="attr">rel</span>=<span class="str">"stylesheet"</span><span class="tag">&gt;</span>
+
+<span class="cm">&lt;!-- Bootstrap JS bundle — place before &lt;/body&gt; --&gt;</span>
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="content-block">
+    <div class="block-label">Grid System</div>
+    <div class="block-title">Bootstrap's 12-Column Grid</div>
+    <div class="block-text">Bootstrap uses a 12-column grid based on Flexbox. Columns are defined using classes like <strong>col-4</strong> (4 of 12 columns) and breakpoint prefixes like <strong>col-md-6</strong> (half-width on medium screens and above).</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW — Bootstrap Grid</div>
+      <div class="demo-content">
+        <div class="bs-demo">
+          <p style="font-size:11px;color:#666;margin-bottom:8px">Three equal columns (col-4):</p>
+          <div class="bs-row">
+            <div class="bs-col">col-4</div>
+            <div class="bs-col">col-4</div>
+            <div class="bs-col">col-4</div>
+          </div>
+          <p style="font-size:11px;color:#666;margin-bottom:8px">Two half-width columns (col-6):</p>
+          <div class="bs-row">
+            <div class="bs-col-sm" style="flex:0 0 calc(50% - 5px)">col-6</div>
+            <div class="bs-col-sm" style="flex:0 0 calc(50% - 5px)">col-6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"row"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-4"</span><span class="tag">&gt;</span>Column 1<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-4"</span><span class="tag">&gt;</span>Column 2<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-4"</span><span class="tag">&gt;</span>Column 3<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="cm">&lt;!-- Responsive: full-width mobile, half-width on md+ --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col-12 col-md-6"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="content-block">
+    <div class="block-label">Components</div>
+    <div class="block-title">Navbar Component</div>
+    <div class="block-text">Bootstrap's Navbar component creates a fully responsive navigation bar with minimal code. It automatically collapses to a hamburger menu on smaller screens.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW — Navbar</div>
+      <div class="demo-content">
+        <div class="bs-navbar">
+          <span class="bs-navbar-brand">MyWebsite</span>
+          <div class="bs-nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="str">"navbar navbar-expand-lg navbar-dark bg-dark"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"navbar-brand"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>MyWebsite<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="str">"navbar-nav"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"nav-item"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"nav-link"</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="content-block">
+    <div class="block-label">Components</div>
+    <div class="block-title">Cards &amp; Buttons</div>
+    <div class="block-text">Bootstrap cards are flexible content containers. Buttons come with predefined colour-coded variants like <strong>btn-primary</strong>, <strong>btn-success</strong>, and <strong>btn-danger</strong>.</div>
+    <div class="demo-box">
+      <div class="demo-label">▶ LIVE PREVIEW — Card + Buttons</div>
+      <div class="demo-content">
+        <div class="bs-card" style="margin-bottom:16px">
+          <div class="bs-card-header">🎓 Student Profile</div>
+          <div class="bs-card-body">
+            <strong>Ashish Bista</strong><br>BSc IT · ISMT College<br>
+            <button class="bs-btn bs-btn-primary">View Profile</button>
+            <button class="bs-btn bs-btn-success">Contact</button>
+            <button class="bs-btn bs-btn-danger">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card-header"</span><span class="tag">&gt;</span>Student Profile<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card-body"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h5</span> <span class="attr">class</span>=<span class="str">"card-title"</span><span class="tag">&gt;</span>Ashish Bista<span class="tag">&lt;/h5&gt;</span>
+    <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"card-text"</span><span class="tag">&gt;</span>BSc IT · ISMT College<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-primary"</span><span class="tag">&gt;</span>View Profile<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn btn-success"</span><span class="tag">&gt;</span>Contact<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 5 -->
+  <div class="content-block">
+    <div class="block-label">Utilities</div>
+    <div class="block-title">Bootstrap Utility Classes</div>
+    <div class="block-text">Bootstrap's utility classes let you apply spacing, typography, colour, display, and flex properties directly in HTML without writing custom CSS.</div>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div class="code-lang">HTML</div>
+      </div>
+      <div class="code-body">
+<span class="cm">&lt;!-- Spacing: m = margin, p = padding, 1–5 = size --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mt-3 mb-2 px-4"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+
+<span class="cm">&lt;!-- Text utilities --&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"text-center text-primary fw-bold"</span><span class="tag">&gt;</span>Hello<span class="tag">&lt;/p&gt;</span>
+
+<span class="cm">&lt;!-- Flex layout utilities --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"d-flex justify-content-between align-items-center"</span><span class="tag">&gt;</span>
+  ...<span class="tag">&lt;/div&gt;</span>
+
+<span class="cm">&lt;!-- Hide on mobile, show on medium+ --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"d-none d-md-block"</span><span class="tag">&gt;</span>Desktop only<span class="tag">&lt;/div&gt;</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /inner-page -->
+</body>
+</html>
